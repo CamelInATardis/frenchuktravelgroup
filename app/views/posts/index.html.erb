@@ -13,6 +13,6 @@
   <% end %>
 </div>
 
-<% if current_user.username == "tavinturner" or "colemowery" %>
+<% if user_signed_in? and current_user == 1 or 2 %>
   <%= link_to 'New Post', new_post_path %>
 <% end %>
