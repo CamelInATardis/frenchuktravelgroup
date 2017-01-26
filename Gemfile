@@ -29,6 +29,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # Use markdown for blog posts
 gem 'redcarpet'
+# Use Paperclip for image uploads
+gem 'paperclip'
+# Use Devise for user authentication
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

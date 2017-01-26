@@ -13,4 +13,6 @@
   <% end %>
 </div>
 
-<%= link_to 'New Post', new_post_path %>
+<% if current_user.username == "tavinturner" or "colemowery" %>
+  <%= link_to 'New Post', new_post_path %>
+<% end %>
