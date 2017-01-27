@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="article-title"><%= @post.title %></h1>
-<hr>
-
-<div id="img-ban" style="background-image:url(<%= @post.image.url(:large) %>);background-color:#24272E;"><div class="grad-v"></div></div>
+<div id="img-ban" style="background-image:url(<%= @post.image.url(:large) %>);background-color:#24272E;">
+  <div class="grad-v">
+    <h1 class="article-title"><%= @post.title %></h1>
+    <hr>
+  </div>
+</div>
 
 <p class="body">
   <%= @post.body.html_safe %>
