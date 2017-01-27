@@ -4,12 +4,11 @@
   <div class="grad-v">
     <h1 class="article-title"><%= @post.title %></h1>
     <hr>
+    <h3 class="user">Written by @<%= @post.user.username %></h3>
   </div>
 </div>
+<div style="height: 87vh;"></div>
 
 <p class="body">
   <%= @post.body.html_safe %>
 </p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>

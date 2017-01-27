@@ -4,6 +4,18 @@
 
 @import "_colors.scss";
 
+a:hover {
+  background-color: transparent !important;
+}
+
+.user {
+  text-transform: uppercase;
+  color: $light-2;
+  font-family: "Overpass";
+  font-size: 1.2em;
+  font-weight: lighter;
+}
+
 #wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -19,10 +31,6 @@ a {
   color: $dark;
   background: transparent;
   margin: 4.15vw;
-  &:hover {
-    background: transparent;
-    color: none;
-  }
   .post-slot {
     width: 25vw;
     height: 30vh;
@@ -34,6 +42,11 @@ a {
     background-color: $light-2;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    transition: all 0.2s;
+    &:hover {
+      background-color: darken($light-2, 1);
+      border-color: darken($color, 2);
+    }
     h2.title {
       text-transform: uppercase;
     }
@@ -58,7 +71,7 @@ hr {
   border-radius: 5px;
   background-color: $color;
   border: none;
-  margin-bottom: 3vh;
+  margin-bottom: 1vh;
 }
 
 #img-ban {
@@ -67,6 +80,8 @@ hr {
   background-position: bottom;
   background-size: cover;
   background-attachment: fixed;
+  position: absolute;
+  top: 0;
   .grad-v {
     background-image: linear-gradient(transparentize($dark, 0.5), transparentize($dark, 1) 25%, transparentize($dark, 1) 75%, transparentize($dark, 0.5));
     width: 100%;
