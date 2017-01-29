@@ -39,6 +39,8 @@ a {
     overflow: hidden;
     background-color: $dark;
     background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
     border-bottom: 10px solid $color;
     border-radius: 3px;
     border-top-left-radius: 7px;
