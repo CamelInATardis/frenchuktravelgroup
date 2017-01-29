@@ -34,18 +34,28 @@ a {
   .post-slot {
     width: 25vw;
     height: 30vh;
-    padding: 0px 10px;
+    padding: 0px 0px;
     box-sizing: border-box;
     overflow: hidden;
+    background-color: $dark;
+    background-blend-mode: screen;
     border-bottom: 10px solid $color;
     border-radius: 3px;
-    background-color: $light-2;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     transition: all 0.2s;
     &:hover {
       background-color: darken($light-2, 1);
       border-color: darken($color, 2);
+      color: $dark;
+    }
+    .contain {
+      opacity: 0;
+      transition: all 0.2s;
+      padding: 10px;
+    }
+    &:hover .contain {
+      opacity: 1
     }
     h2.title {
       text-transform: uppercase;
@@ -56,6 +66,14 @@ a {
         font-weight: normal;
       }
     }
+  }
+  .timer {
+    width: 25vw;
+    height: 30px;
+    background: linear-gradient(to top, transparentize($dark, 0.5), transparentize($dark, 1));
+    position: relative;
+    bottom: 73px;
+    transition: all 0.2s;
   }
 }
 

@@ -44,7 +44,7 @@ h1 {
 .floater {
   position: fixed;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   width: 100vw;
   box-sizing: border-box;
@@ -52,9 +52,10 @@ h1 {
   margin: 0 !important;
   height: 10vh;
   z-index: 20;
-  background: transparentize($dark, 0.9);
-  box-shadow: transparentize($dark, 0.9) 0 0 20px;
+  background: transparentize($dark, 0.1);
+  box-shadow: transparentize($dark, 0.1) 0 0 50px;
   margin-top: -100px !important;
+  -webkit-backdrop-filter: blur(10px);
   a {
     color: $light;
     font-size: 1.2em;
@@ -62,6 +63,16 @@ h1 {
     &:hover {
       background-color: transparent;
       color: $color;
+    }
+  }
+  .left {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    img {
+      height: 60%;
     }
   }
 }
