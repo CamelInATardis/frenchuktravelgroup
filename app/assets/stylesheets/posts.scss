@@ -47,17 +47,38 @@ a {
     border-top-right-radius: 7px;
     transition: all 0.2s;
     &:hover {
-      background-color: darken($light-2, 1);
-      border-color: darken($color, 2);
-      color: $dark;
+      width: 27vw;
+      height: 32.4vh;
+      margin: 0 -1vw;
+    }
+    &:hover + .timer {
+      width: 27vw;
+      margin: -1.2vh -1vw;
+      bottom: 63px;
     }
     .contain {
       opacity: 0;
       transition: all 0.2s;
       padding: 10px;
+      background-color: transparentize($light-2, 0.5);
+      height: 100%;
+      border-radius: 7px 7px 0px 0px;
+      .body-disp {
+        height: 17.5vh;
+        overflow-y: hidden;
+        z-index: 6;
+      }
+      .bgrad {
+        transition: all 0.2s;
+        height: 2.5vh;
+        width: 100%;
+        position: relative;
+        bottom: 2.5vh;
+        width: calc(25vw - 20px);
+      }
     }
     &:hover .contain {
-      opacity: 1
+      opacity: 1;
     }
     h2.title {
       text-transform: uppercase;
@@ -74,8 +95,13 @@ a {
     height: 30px;
     background: linear-gradient(to top, transparentize($dark, 0.5), transparentize($dark, 1));
     position: relative;
+    left: 0px;
     bottom: 73px;
     transition: all 0.2s;
+    p {
+      color: $light-2 !important;
+      text-shadow: 0 0 5px $dark;
+    }
   }
 }
 
@@ -101,7 +127,9 @@ hr {
   background-size: cover;
   background-attachment: fixed;
   position: absolute;
+  z-index: 0;
   top: 0;
+  left: 0;
   .grad-v {
     background-image: linear-gradient(transparentize($dark, 0.5), transparentize($dark, 1) 25%, transparentize($dark, 1) 75%, transparentize($dark, 0.5));
     width: 100%;
@@ -116,6 +144,8 @@ hr {
   }
 }
 
-p.body {
+.body {
   font-size: 1.4em;
+  width: 80vw;
+  margin: 10vh auto;
 }

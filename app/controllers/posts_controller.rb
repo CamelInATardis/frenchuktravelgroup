@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post.body = Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(@post.body)
+    @post.body = Redcarpet::Markdown.new(Redcarpet::Render::HTML.new(render_options = {no_styles: true})).render(@post.body)
   end
 
   # GET /posts/new
